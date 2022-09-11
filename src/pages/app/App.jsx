@@ -1,44 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useContext } from 'react';
-import { AuthContext } from '../../contexts/auth/AuthContext';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { AuthContext } from '../../contexts';
 
-export const App = () => 
-{
-  const navigate = useNavigate();
-
-  const { user, logout } = useContext(AuthContext);
-  const tokenUser = localStorage.getItem('token')
-
-  const config = {
-    headers: { Authorization: `${tokenUser}` }
-  }; 
-  const onLogout = async (e) => {
-    e.preventDefault();
-    try {
-        const response = await axios.post(
-            'http://localhost:8000/api/v1/logout',
-            { headers: { 'accept': 'application/json' } },
-            config
-        )
-        logout()
-        navigate('/login')       
-    } catch (error) {
-        console.log(error.response.data.message, 'error');
-    }
-}
+export const App = () => {
+  const { user } = useContext(AuthContext);
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Prison System</h1>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Bienvenido - {user.username}
-        </p>
-        <button style={{backgroundColor:"red", padding:"5px", borderRadius:"10px"}} onClick={onLogout}>Logout</button>
+        <h1 className='text-4xl font-bold'>Prison System Portal</h1>
+        <h2 className='text-2xl font-bold'>Welcome {user.full_name}</h2>
       </header>
     </div>
   );
