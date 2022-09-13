@@ -18,7 +18,6 @@ export const UpdateProfileAvatar = () => {
                     'https://appsistemacarcelario.herokuapp.com/api/v1/profile',
                     { headers: { 'accept': 'application/json', 'authorization': token } }
                 )
-                console.log(response)
                 const user = { ...response.data.data.user, id }
                 setAvatar(user);
                 console.log(user);
