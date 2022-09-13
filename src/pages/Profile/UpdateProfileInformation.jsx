@@ -15,7 +15,7 @@ export const UpdateProfileInformation = () => {
                     { headers: { 'accept': 'application/json', 'authorization': token } }
                 )
                 console.log(response)
-                const user = { ...response.data.data.user }
+                const user = { ...response.data.data.avatar }
                 setProfile(user);
                 console.log(user);
             } catch (error) {
