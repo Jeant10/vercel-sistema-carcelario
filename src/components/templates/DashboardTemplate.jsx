@@ -31,7 +31,7 @@ export const DashboardTemplate = () => {
           Prison System
         </h2>
         <img
-          src={user.avatar}
+          src="https://cdn-icons-png.flaticon.com/512/711/711769.png"
           alt="img-client"
           className="m-auto mt-4"
           width={120}
