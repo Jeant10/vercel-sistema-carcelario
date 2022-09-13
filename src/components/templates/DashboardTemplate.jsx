@@ -34,7 +34,8 @@ export const DashboardTemplate = () => {
           src="https://cdn-icons-png.flaticon.com/512/711/711769.png"
           alt="img-client"
           className="m-auto mt-4"
-          width={120}
+          width={512}
+          height={512}
         />
         <h3 className="text-2xl font-black text-center text-white">
           {user.full_name}
