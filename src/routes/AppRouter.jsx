@@ -10,6 +10,7 @@ import { DashboardTemplate } from '../components/templates/DashboardTemplate';
 import { ListDirectors } from '../pages/director/ListDirectors';
 import { ShowDirector } from '../pages/director/ShowDirector';
 import { CreateDirector, UpdateDirector } from '../pages/director';
+import { ShowProfile } from '../pages/Profile/ShowProfile';
 
 export const AppRouter = () => {
     return (
@@ -34,8 +35,7 @@ export const AppRouter = () => {
                                     <Route index path='/directors/show/:id' element={<ShowDirector />} />
                                     <Route index path='/directors/create' element={<CreateDirector />} />
                                     <Route index path='/directors/edit/:id' element={<UpdateDirector />} />
-
-
+                                    <Route index path='/profile' element={<ShowProfile />} />
                                 </Route>
                         </Routes>
 
