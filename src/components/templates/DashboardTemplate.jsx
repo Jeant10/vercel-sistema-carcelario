@@ -30,8 +30,8 @@ export const DashboardTemplate = () => {
         <h2 className="text-4xl font-black text-center text-white underline">
           Prison System
         </h2>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/711/711769.png"
+        <a
+          href="https://cdn-icons-png.flaticon.com/512/711/711769.png"
           alt="img-client"
           className="m-auto mt-4"
           width={512}
