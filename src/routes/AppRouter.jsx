@@ -12,6 +12,9 @@ import { ShowDirector } from '../pages/director/ShowDirector';
 import { CreateDirector, UpdateDirector } from '../pages/director';
 import { ShowProfile } from '../pages/Profile/ShowProfile';
 import { ShowJails } from '../pages/Jails/ShowJails';
+import { ListReports } from '../pages/Report/ListReports';
+import { ShowReport } from '../pages/Report/ShowReport';
+import { CreateReport, UpdateReport} from '../pages/Report';
 
 export const AppRouter = () => {
     return (
@@ -38,6 +41,10 @@ export const AppRouter = () => {
                                     <Route index path='/directors/edit/:id' element={<UpdateDirector />} />
                                     <Route index path='/profile' element={<ShowProfile />} />
                                     <Route index path = '/jails' element = {<ShowJails/>} />
+                                    <Route index path = '/reports' element = {<ListReports/>} />
+                                    <Route index path = '/reports/show/:id' element={<ShowReport/>} />
+                                    <Route index path='/reports/create' element={<CreateReport />} />
+                                    <Route index path='/reports/edit/:id' element={<UpdateReport />} />
                                 </Route>
                         </Routes>
 

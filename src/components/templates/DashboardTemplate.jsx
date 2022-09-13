@@ -43,6 +43,53 @@ export const DashboardTemplate = () => {
           {user.role}
         </h3>
         <hr className="mt-5 text-orange-900" />
+        {user.role === 'guard' ?  
+        <ul className="mt-5 list-disc list-outside px-5">
+        <li className="text-orange-900">
+            <Link
+              to="/profile"
+              className={`${
+                urlActual === "/profile"
+                  ? "text-blue-300 underline"
+                  : "text-white"
+              } text-2xl block mt-2 hover:text-blue-200`}
+            >
+              My Profile
+            </Link>
+          </li>
+          <li className="text-orange-900">
+            <Link
+              to="/reports"
+              className={`${
+                urlActual === "/reports"
+                  ? "text-blue-300 underline"
+                  : "text-white"
+              } text-2xl block mt-2 hover:text-blue-200`}
+            >
+              Reports
+            </Link>
+          </li>
+          <li className="text-orange-900">
+            <Link
+              to="/reports/create"
+              className={`${
+                urlActual === "/reports/create"
+                  ? "text-blue-300 underline"
+                  : "text-white"
+              } text-2xl block mt-2 hover:text-blue-200`}
+            >
+              Create a Report
+            </Link>
+          </li>
+          <button
+            type="button"
+            onClick={onLogout}
+            className="m-auto text-white text-2xl block mt-4 hover:text-red-300 text-center bg-red-900 p-1 rounded-lg"
+          >
+            Logout
+          </button>
+        </ul>
+        :
         <ul className="mt-5 list-disc list-outside px-5">
         <li className="text-orange-900">
             <Link
@@ -100,8 +147,8 @@ export const DashboardTemplate = () => {
             Logout
           </button>
         </ul>
+      }   
       </div>
-
       <div className="md:w-3/4 p-10 md:h-screen overflow-y-scroll">
         <Outlet />
       </div>
