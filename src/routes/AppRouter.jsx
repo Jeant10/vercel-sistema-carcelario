@@ -15,6 +15,8 @@ import { ShowJails } from '../pages/Jails/ShowJails';
 import { ListReports } from '../pages/Report/ListReports';
 import { ShowReport } from '../pages/Report/ShowReport';
 import { CreateReport, UpdateReport} from '../pages/Report';
+import ForgotPassword from '../pages/auth/ForgotPassword';
+import ResetPassword from '../pages/auth/ResetPassword';
 
 export const AppRouter = () => {
     return (
@@ -29,6 +31,11 @@ export const AppRouter = () => {
                         </Routes>
                     </PublicRoute>
                 } />
+
+                <Route element={<AuthTemplate />}>
+                        <Route path='/forgot-password' element={<ForgotPassword />} />
+                        <Route path='/reset-password' element={<ResetPassword />} />
+                </Route>
 
                 <Route path='/*' element={
                     <PrivateRoute>

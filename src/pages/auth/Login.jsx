@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Label, Button } from '../../components'
 import { AuthContext } from '../../contexts';
+import { Link } from 'react-router-dom';
 
 export const Login = () => 
 {
@@ -63,6 +64,15 @@ export const Login = () =>
                         onChange={e => setPassword(e.target.value)}
                     />
                 </div>
+
+                <div>
+
+                    <Link type = "button" to ={"/forgot-password"} className="text-sm text-blue-600 hover:text-pink-700 px-2">
+                            Forgot your password?
+                    </Link>
+
+                </div>
+
                 <div className='pt-4 flex justify-center'>
                     <Button name='Sing in' styles='w-3/5' />
                 </div>
