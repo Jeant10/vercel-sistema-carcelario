@@ -80,6 +80,18 @@ export const DashboardTemplate = () => {
               Create a director
             </Link>
           </li>
+          <li className="text-orange-900">
+            <Link
+              to="/jails"
+              className={`${
+                urlActual === "/jails"
+                  ? "text-blue-300 underline"
+                  : "text-white"
+              } text-2xl block mt-2 hover:text-blue-200`}
+            >
+              Jails
+            </Link>
+          </li>
           <button
             type="button"
             onClick={onLogout}

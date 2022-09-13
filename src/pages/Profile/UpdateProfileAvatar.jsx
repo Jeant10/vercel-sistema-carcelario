@@ -9,6 +9,8 @@ export const UpdateProfileAvatar = () => {
     const [avatar, setAvatar] = useState({});
     const token = localStorage.getItem('token');
 
+    console.log("token", token);
+
     useEffect(() => {
         const getAvatar = async () => {
             try {

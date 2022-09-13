@@ -11,6 +11,7 @@ import { ListDirectors } from '../pages/director/ListDirectors';
 import { ShowDirector } from '../pages/director/ShowDirector';
 import { CreateDirector, UpdateDirector } from '../pages/director';
 import { ShowProfile } from '../pages/Profile/ShowProfile';
+import { ShowJails } from '../pages/Jails/ShowJails';
 
 export const AppRouter = () => {
     return (
@@ -36,6 +37,7 @@ export const AppRouter = () => {
                                     <Route index path='/directors/create' element={<CreateDirector />} />
                                     <Route index path='/directors/edit/:id' element={<UpdateDirector />} />
                                     <Route index path='/profile' element={<ShowProfile />} />
+                                    <Route index path = '/jails' element = {<ShowJails/>} />
                                 </Route>
                         </Routes>
 
